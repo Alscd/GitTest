@@ -1,0 +1,34 @@
+/*
+ * Consumer-provided demo styling — NOT shipped by @factory/ui.
+ *
+ * @factory/ui ships component structure (SVG/DOM) only; the anneau-stripe
+ * `.icon`/`.ring` CSS currently lives in apps/nutrition/src/styles.css in
+ * the monorepo (a known gap flagged in packages/ui/README.md, FAC-1003).
+ * This file is the minimal subset an external consumer would otherwise
+ * have to author itself, reproduced here only so this proof's Storybook
+ * renders the primitives at a legible size/shape.
+ */
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon--sm { width: 16px; height: 16px; }
+.icon--md { width: 20px; height: 20px; }
+.icon--lg { width: 24px; height: 24px; }
+
+.ring {
+  border-radius: 50%;
+  /* --ring-p is set inline by the component as a literal percentage, e.g. "62%" */
+  background: conic-gradient(var(--ring-color) var(--ring-p), var(--ring-track) 0);
+}
+.ring__hole {
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

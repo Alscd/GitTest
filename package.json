@@ -1,0 +1,27 @@
+{
+  "name": "factory-ui-external-storybook-proof",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FAC-1003 / FAC-998 AC2 proof: a repo outside Alscd/nutrition-tracker with its own Storybook rendering @factory/ui primitives from the packaged tarball. Not a real product — throwaway proof, see README.",
+  "scripts": {
+    "fetch-ui": "bash scripts/fetch-factory-ui.sh",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build -o storybook-static"
+  },
+  "dependencies": {
+    "@factory/ui": "file:./vendor/factory-ui-0.1.0.tgz",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "8.6.18",
+    "@storybook/react": "8.6.18",
+    "@storybook/react-vite": "8.6.18",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "storybook": "8.6.18",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
