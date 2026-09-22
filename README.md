@@ -7,13 +7,17 @@ separate install root, own Storybook config. It exists only to prove that
 is consumable from *outside* that monorepo, per FAC-998's acceptance
 criterion 2.
 
-This branch lives inside `Alscd/factory-probe` (a throwaway scratch repo)
-rather than a dedicated new repo: the write token used for this work
+This branch lives inside `Alscd/GitTest` (an existing, otherwise-empty
+personal scratch repo — description: "just a test") rather than a
+dedicated new repo: the write token used for this work
 (`FACTORY_GIT_WRITE_TOKEN`) got a 403 (`Resource not accessible by personal
 access token`) on `POST /user/repos` — repo creation needs broader
-account-level scope than this fine-grained PAT has. Flagged as a follow-up
-alongside the `packages:write` gap in nutrition-tracker's `packages/ui/README.md`.
-`factory-probe`'s `main` branch is untouched.
+account-level scope than this fine-grained PAT has. (First choice was
+`Alscd/factory-probe`, an explicitly-labeled throwaway repo, but it's
+archived/read-only and the same token also lacks the admin scope to
+unarchive it — `PATCH` 403'd too.) Flagged as a follow-up alongside the
+`packages:write` gap in nutrition-tracker's `packages/ui/README.md`.
+`GitTest`'s `master` branch is untouched.
 
 ## What this proves
 
